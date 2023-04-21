@@ -1,0 +1,33 @@
+.bg-img{
+    background-image: linear-gradient(
+    to bottom, transparent 40%, #000000
+  ), url(../../assets/header-background.jpg);
+    background-size: cover;
+    
+}
+
+.list-container{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+
+  .home-title{
+    margin-bottom: 0px;
+    color: white;
+  }
+
+  .list-title{
+    margin-bottom: 0px;
+    color: white;
+  }
+
+  .root{
+    background-color: black;
+  }
+
+  .gradient{
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1.0) 50%, transparent 100%);
+  }
