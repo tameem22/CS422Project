@@ -1,4 +1,4 @@
-import NavBar from "../../components/Navbar/Navbar"
+import Navbar from "../../components/Navbar/Navbar"
 import HomeHeader from "../../components/HomeHeader/HomeHeader"
 import Destinations from "../../components/Destinations/Destinations"
 import Activities from "../../components/Activities/Activities"
@@ -10,7 +10,7 @@ const Home = () => {
     <div className="root">
       <div className="gradient">
         <div className="bg-img">
-          <NavBar />
+          <Navbar />
           <HomeHeader />
         </div>
       </div>

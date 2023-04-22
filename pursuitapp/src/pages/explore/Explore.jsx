@@ -116,6 +116,9 @@ const Explore = () => {
             <ExploreItem />
             <ExploreItem />
             <ExploreItem />
+            <ExploreItem />
+            <ExploreItem />
+            <ExploreItem />
           </div>
         </div>
       </div>

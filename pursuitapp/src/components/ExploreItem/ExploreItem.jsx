@@ -51,7 +51,7 @@ const ExploreItem = () => {
         </div>
         <div className="itemDetailTexts">
           <span className="itemPrice">$189</span>
-          <span className="itemTaxOp">Includes taxes and fees</span>
+          <span className="itemTaxText">Includes taxes and fees</span>
           <button className="itemCheckButton" onClick={handleActivity}>Check availability</button>
         </div>
       </div>
