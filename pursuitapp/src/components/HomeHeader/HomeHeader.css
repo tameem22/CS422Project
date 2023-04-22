@@ -7,21 +7,6 @@
     position: relative;
   }
   
-  .headerContainer {
-    width: 100%;
-    max-width: 1024px;
-    margin: 20px 0px 100px 0px;
-  }
-  
-  .headerContainer.listMode {
-    margin: 20px 0px 0px 0px;
-  }
-  
-  
-  .headerDesc {
-    margin: 20px 0px;
-  }
-  
   .headerBtn {
     background-color: #0071c2;
     color: white;
@@ -44,10 +29,6 @@
     bottom: -25px;
     width: 100%;
     max-width: 1024px;
-  }
-  
-  .headerIcon {
-    color: lightgray;
   }
   
   .headerSearchItem {

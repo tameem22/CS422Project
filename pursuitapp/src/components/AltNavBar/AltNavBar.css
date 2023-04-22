@@ -1,0 +1,38 @@
+.navbar{
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    background-color: transparent;
+  }
+  
+  .navContainer{
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: transparent;
+  }
+  
+  .logo{
+    font-weight: 550;
+    font-size: 50px;
+    font-family: 'Caveat';
+    background:none;
+    border:none;
+    margin:0;
+    padding:0;  
+    cursor: pointer;
+  }
+  
+  .navButton{
+    font-size: 20px;
+    background:none;
+    border:none;
+    margin:20px;
+    padding:0;  
+    cursor: pointer;
+    
+  }
+
+ 

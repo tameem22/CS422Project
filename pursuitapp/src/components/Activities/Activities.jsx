@@ -1,12 +1,27 @@
 import "./Activities.css";
 import { useNavigate } from "react-router-dom";
+import { useState } from "react";
 
 const Destinations = () => {
+
+  const [destination, setDestination] = useState("");
+    const [date, setDate] = useState([
+      {
+        startDate: new Date(),
+        endDate: new Date(),
+        key: "selection",
+      },
+    ]);
+    const [options, setOptions] = useState({
+      adult: 1,
+      children: 0,
+      room: 1,
+    });
 
   const navigate = useNavigate();
 
   const handleItemClick = () => {
-    navigate("/Explore", {});
+    navigate("/Explore", { state: { destination, date, options } });
   };
 
   return (
