@@ -25,8 +25,8 @@ const Navbar = () => {
     navigate("/Explore", { state: { destination, date, options } });
   };
 
-  const handleMyAccount = () => {
-    navigate("/MyAccount", {});
+  const handleMyPlans = () => {
+    navigate("/MyPlans", {});
   };
 
   const handleHome = () => {
@@ -41,8 +41,8 @@ const Navbar = () => {
         <div className="navItems">
           <button className="navButton" onClick={handleExplore}>
             Explore</button>
-          <button className="navButton" onClick={handleMyAccount}>
-            My Account</button>
+          <button className="navButton" onClick={handleMyPlans}>
+            My Plans</button>
         </div>
       </div>
     </div>
