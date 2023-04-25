@@ -10,29 +10,35 @@ import "./Checkout.css";
 const PersonalDetails = ({ onChange }) => (
   <div>
     <h3>Personal Details</h3>
-    <input type="text" name="firstName" placeholder="First Name" onChange={onChange} />
-    <input type="text" name="lastName" placeholder="Last Name" onChange={onChange} />
-    <input type="email" name="email" placeholder="Email" onChange={onChange} />
-    <input type="tel" name="phone" placeholder="Phone Number" onChange={onChange} />
+    <div className="checkoutInputContainer">
+      <input className="checkoutInput" type="text" name="firstName" placeholder="First Name" onChange={onChange} />
+      <input className="checkoutInput" type="text" name="lastName" placeholder="Last Name" onChange={onChange} />
+    </div>
+    <input className="checkoutInput" type="email" name="email" placeholder="Email" onChange={onChange} />
+    <input className="checkoutInput" type="tel" name="phone" placeholder="Phone Number" onChange={onChange} />
   </div>
 );
 
 const BillingDetails = ({ onChange }) => (
   <div>
     <h3>Billing Address</h3>
-    <input type="text" name="address" placeholder="Address" onChange={onChange} />
-    <input type="text" name="city" placeholder="City" onChange={onChange} />
-    <input type="text" name="state" placeholder="State" onChange={onChange} />
-    <input type="text" name="zipcode" placeholder="Zip Code" onChange={onChange} />
+    <input className="checkoutInput" type="text" name="address" placeholder="Address" onChange={onChange} />
+    <div className="checkoutInputContainer">
+      <input className="checkoutInput" type="text" name="city" placeholder="City" onChange={onChange} />
+      <input className="checkoutInput" type="text" name="state" placeholder="State" onChange={onChange} />
+      <input className="checkoutInput" type="text" name="zipcode" placeholder="Zip Code" onChange={onChange} />
+    </div>
   </div>
 );
 
 const PaymentDetails = ({ onChange }) => (
   <div>
     <h3>Payment Details</h3>
-    <input type="text" name="cardNumber" placeholder="Card Number" onChange={onChange} />
-    <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" onChange={onChange} />
-    <input type="text" name="cvv" placeholder="CVV" onChange={onChange} />
+    <input className="checkoutInput" type="text" name="cardNumber" placeholder="Card Number" onChange={onChange} />
+    <div className="checkoutInputContainer">
+      <input className="checkoutInput" type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" onChange={onChange} />
+      <input className="checkoutInput" type="text" name="cvv" placeholder="CVV" onChange={onChange} />
+    </div>
   </div>
 );
 

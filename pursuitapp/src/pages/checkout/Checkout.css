@@ -96,3 +96,32 @@
     border-radius: 10%;
 }
 
+.checkoutInput{
+    display: block;
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #b0b0b0;
+    border-radius: 5px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.checkoutInput:focus {
+    outline: none;
+    border-color: #003580;
+    box-shadow: 0 0 7px #003580;
+}
+
+
+.checkoutInputContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 63%;
+
+}
+
+.checkoutInputContainer>input{
+    flex: 1;
+    
+}
