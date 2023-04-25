@@ -48,8 +48,8 @@ const Activity = () => {
           </ul>
         </div>
         <div className="booking-buttons">
-          <button class="bookButton" onClick={handleCheckout}>Book Now</button>
           <button class="bookButton" onClick={handleMyPlans}>Start New Plan</button>
+          <button class="bookButton" onClick={handleCheckout}>Book Now</button>
         </div>
         <div className="activity-instrInfo">
           <h3>Available Instructors</h3>

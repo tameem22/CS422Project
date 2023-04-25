@@ -46,7 +46,7 @@
  
  .costBox {
     flex: 2;
-    background-color: #b4b4b4;
+    background-color: #003580;
     padding: 10px;
     border-radius: 10px;
     position: sticky;
@@ -71,3 +71,42 @@
    border-radius: 10%;
 }
 
+.costDetail{
+   display: flex;
+   flex-direction: row;
+   justify-content: space-between;
+   margin-bottom: 10px;
+   color:white;
+}
+
+.bookButton-white{
+   height: 40px;
+   width: auto;
+   appearance: button;
+   background-color: white;
+   border-radius: 6px;
+   border-width: 0;
+   box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+   box-sizing: border-box;
+   color: #000000;
+   cursor: pointer;
+   font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+   font-size: 100%;
+   line-height: 1.15;
+   margin: 12px 0 0;
+   outline: none;
+   overflow: hidden;
+   padding: 0 25px;
+   position: relative;
+   text-align: center;
+   text-transform: none;
+   transform: translateZ(0);
+   transition: all .2s,box-shadow .08s ease-in;
+   user-select: none;
+   -webkit-user-select: none;
+   touch-action: manipulation;
+}
+
+.costHeader{
+   color: white;
+}

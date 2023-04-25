@@ -100,7 +100,7 @@ const MyPlans = () => {
 
            </div>
            <div className="equipment">
-             <h1>Equipment</h1>
+             <h1>Preparation</h1>
              <h4>Provided Equipment:</h4>
              <ul>
                <li>Provided Equipment #1</li>
@@ -140,7 +140,7 @@ const MyPlans = () => {
            </div>
          </div>
          <div className="costBox">
-           <h2>Total Trip Cost:</h2>
+           <h2 className="costHeader">Total Trip Cost:</h2>
            <div className="filterItem">
              <span onClick={() => setOpenDate(!openDate)}>{`${format(
                date[0].startDate,
@@ -155,13 +155,23 @@ const MyPlans = () => {
              )}
            </div>
            <div className="costInfo">
-             <b>Activity Charge x3: $900.00</b>
-             <b>Lodging x3 Nights: $600.00</b>
-             <b>Taxes & Fees: $80.00</b>
-             <b>Total:   $1580.00</b>
-             <br></br>
-             <br></br>
-             <button className="bookButton" onClick={handleCheckout}>Go to Checkout</button>
+            <div className="costDetail">
+              <span>Activity Charge x3:</span>
+              <span>$900.00</span>
+            </div>
+            <div className="costDetail">
+              <span>Lodging x3 Nights:</span>
+              <span>$600.00</span>
+            </div>
+            <div className="costDetail">
+              <span>Taxes & Fees:</span>
+              <span>$80.00</span>
+            </div>
+            <div className="costDetail">
+              <span>Total:</span>
+              <span>$1580.00</span>
+            </div>
+             <button className="bookButton-white" onClick={handleCheckout}>Go to Checkout</button>
            </div>
          </div>
        </div>
