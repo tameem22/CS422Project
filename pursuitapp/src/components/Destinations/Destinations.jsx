@@ -20,8 +20,11 @@ const Destinations = () => {
 
   const navigate = useNavigate();
 
+  // const handleItemClick = () => {
+  //   navigate("/Explore", { state: { destination, date, options } });
+  // };
   const handleItemClick = () => {
-    navigate("/Explore", { state: { destination, date, options } });
+    navigate("/Location", { state: { destination, date, options } });
   };
 
   return (
