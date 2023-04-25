@@ -7,6 +7,7 @@ import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import "./MyPlans.css";
+import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
 
 
 const MyPlans = () => {
@@ -20,23 +21,25 @@ const MyPlans = () => {
    }
  ]);
 
- const handleConfirmation = () => {
-  navigate("/Confirmation", {});
+ const handleCheckout = () => {
+  navigate("/Checkout", {});
 };
 
  const handleInstructor = () => {
    navigate("/InstructorInfo", {});
  };
 
+ 
 
  return (
    <div>
      <Navbar />
      <div className="checkoutContainer">
        <div className="checkoutWrapper">
+        
          <div className="trip-info">
+         <DropdownMenu />
            <div className="tripTitle">
-             <h1>User's Trip Title</h1>
              <b>Trip Location: Denver, Colorado</b>
              <b>Trip Activity: Skiing</b>
              <b>Total Group Size: 3</b>
@@ -44,16 +47,16 @@ const MyPlans = () => {
            </div>
            <div className="members">
              <h1>Group Members</h1>
-             <div className="instrButtons">
-             <button>John Doe<br/> <br/>Invite Status: Accepted</button>
-             <button>John Doe<br/> <br/>Invite Status: Accepted</button>
-             <button>John Doe<br/> <br/>Invite Status: Accepted</button>
-             <button>+<br/> <br/>Invite More Members</button>
+             <div className="myplans-gmember-container">
+               <button>John Doe<br /> <br />Invite Status: Accepted</button>
+               <button>John Doe<br /> <br />Invite Status: Accepted</button>
+               <button>John Doe<br /> <br />Invite Status: Declined</button>
+               <button>+<br /> <br />Invite More Members</button>
              </div>
            </div>
            <div className="availableIns">
              <h1>Available Instructors</h1>
-             <div className="instrButtons">
+             <div className="myplans-instructor-container">
                <button onClick={handleInstructor}>
                  <div className="instructorWrapper">
                    <div className="instructorRating">
@@ -66,7 +69,7 @@ const MyPlans = () => {
                      className="instructorImg"
                      onClick={handleInstructor}
                    />
-                 </div><u>View Instructor Page</u></button>
+                 </div><u className="instr-page-link">View Instructor Page</u></button>
                <button onClick={handleInstructor}>
                  <div className="instructorWrapper">
                    <div className="instructorRating">
@@ -79,7 +82,7 @@ const MyPlans = () => {
                      className="instructorImg"
                      onClick={handleInstructor}
                    />
-                 </div><u>View Instructor Page</u></button>
+                 </div><u className="instr-page-link">View Instructor Page</u></button>
                  <button onClick={handleInstructor}>
                  <div className="instructorWrapper">
                    <div className="instructorRating">
@@ -92,7 +95,7 @@ const MyPlans = () => {
                      className="instructorImg"
                      onClick={handleInstructor}
                    />
-                 </div><u>View Instructor Page</u></button>
+                 </div><u className="instr-page-link">View Instructor Page</u></button>
              </div>
 
            </div>
@@ -158,7 +161,7 @@ const MyPlans = () => {
              <b>Total:   $1580.00</b>
              <br></br>
              <br></br>
-             <button className="bookButton" onClick={handleConfirmation}>Book Now</button>
+             <button className="bookButton" onClick={handleCheckout}>Go to Checkout</button>
            </div>
          </div>
        </div>

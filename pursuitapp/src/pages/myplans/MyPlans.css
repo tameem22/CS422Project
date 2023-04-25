@@ -59,4 +59,15 @@
     flex-direction: column;
  }
  
+ .myplans-instructor-container{
+   justify-content: left;
+   display: flex;
+   flex-direction: row;
+   gap: 20px;
+}
+
+.myplans-instructor-container>button {
+   padding: 10px;
+   border-radius: 10%;
+}
 

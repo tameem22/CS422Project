@@ -114,8 +114,24 @@
     width: 25%;
     height:auto;
   }
-  /* .equipmentInfo{
-    position:relative;
-    right:100px;
-    } */
+  .equipmentInfo{
+    text-align: center;
+    width: 25%;
+  } 
 
+  .activity-instrButton > button{
+    padding: 10px;
+    border-radius: 10%;
+  }
+
+  .activity-instrButton {
+    justify-content: center;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .booking-buttons{
+    display: flex;
+    flex-direction: column;
+  }

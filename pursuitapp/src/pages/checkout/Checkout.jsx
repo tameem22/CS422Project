@@ -2,11 +2,39 @@
 
 import Navbar from "../../components/Navbar/Navbar"
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
 import { useState } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import "./Checkout.css";
+
+const PersonalDetails = ({ onChange }) => (
+  <div>
+    <h3>Personal Details</h3>
+    <input type="text" name="firstName" placeholder="First Name" onChange={onChange} />
+    <input type="text" name="lastName" placeholder="Last Name" onChange={onChange} />
+    <input type="email" name="email" placeholder="Email" onChange={onChange} />
+    <input type="tel" name="phone" placeholder="Phone Number" onChange={onChange} />
+  </div>
+);
+
+const BillingDetails = ({ onChange }) => (
+  <div>
+    <h3>Billing Address</h3>
+    <input type="text" name="address" placeholder="Address" onChange={onChange} />
+    <input type="text" name="city" placeholder="City" onChange={onChange} />
+    <input type="text" name="state" placeholder="State" onChange={onChange} />
+    <input type="text" name="zipcode" placeholder="Zip Code" onChange={onChange} />
+  </div>
+);
+
+const PaymentDetails = ({ onChange }) => (
+  <div>
+    <h3>Payment Details</h3>
+    <input type="text" name="cardNumber" placeholder="Card Number" onChange={onChange} />
+    <input type="text" name="expiryDate" placeholder="Expiry Date (MM/YY)" onChange={onChange} />
+    <input type="text" name="cvv" placeholder="CVV" onChange={onChange} />
+  </div>
+);
 
 
 const Checkout = () => {
@@ -28,6 +56,17 @@ const Checkout = () => {
    navigate("/InstructorInfo", {});
  };
 
+ const [formData, setFormData] = useState({});
+
+ const handleChange = (event) => {
+  setFormData({ ...formData, [event.target.name]: event.target.value });
+};
+
+const handleSubmit = (event) => {
+  event.preventDefault();
+  // Process the formData, e.g., validate and send to an API.
+  console.log(formData);
+};
 
  return (
    <div>
@@ -42,11 +81,11 @@ const Checkout = () => {
              <b>Total Group Size: 3</b>
              <b>Trip Status: Planned</b>
            </div>
-           
+
            <div className="availableIns">
              <h2>Confirm Your Instructor</h2>
-             <div className="instrButtons">
-               <button onClick={handleInstructor}>
+             <div className="checkout-instructor-container">
+               <button >
                  <div className="instructorWrapper">
                    <div className="instructorRating">
                      <span>John I.</span>
@@ -55,11 +94,11 @@ const Checkout = () => {
                    <img
                      src="https://i.imgur.com/UeFpMQf.png"
                      alt=""
-                     className="instructorImg"
-                     onClick={handleInstructor}
+                     className="checkout-instructorImg"
                    />
-                 </div><u>View Instructor Page</u></button>
-               <button onClick={handleInstructor}>
+                 </div><u className='instr-page-link' onClick={handleInstructor}>View Instructor Page</u>
+               </button>
+               <button >
                  <div className="instructorWrapper">
                    <div className="instructorRating">
                      <span>John I.</span>
@@ -68,25 +107,19 @@ const Checkout = () => {
                    <img
                      src="https://i.imgur.com/UeFpMQf.png"
                      alt=""
-                     className="instructorImg"
-                     onClick={handleInstructor}
+                     className="checkout-instructorImg"
                    />
-                 </div><u>View Instructor Page</u></button>
-                 <button onClick={handleInstructor}>
-                 <div className="instructorWrapper">
-                   <div className="instructorRating">
-                     <span>John I.</span>
-                     <button>4.7 ✰</button>
-                   </div>
-                   <img
-                     src="https://i.imgur.com/UeFpMQf.png"
-                     alt=""
-                     className="instructorImg"
-                     onClick={handleInstructor}
-                   />
-                 </div><u>View Instructor Page</u></button>
+                 </div ><u className='instr-page-link' onClick={handleInstructor}>View Instructor Page</u>
+               </button>
              </div>
-
+           </div>
+           <div>
+             <h2>Checkout</h2>
+             <form onSubmit={handleSubmit}>
+               <PersonalDetails onChange={handleChange} />
+               <PaymentDetails onChange={handleChange} />
+               <BillingDetails onChange={handleChange} />
+             </form>
            </div>
          </div>
          <div className="costBox">
@@ -118,7 +151,7 @@ const Checkout = () => {
      </div>
    </div>
  )
-}
+};
 
 
 export default Checkout

@@ -17,6 +17,10 @@ const Activity = () => {
     navigate("/InstructorInfo", {});
   };
 
+  const handleMyPlans = () => {
+    navigate("/MyPlans", {});
+  };
+
 
   return (
     <div>
@@ -40,13 +44,17 @@ const Activity = () => {
             <li>Provided Equipment #1</li>
             <li>Provided Equipment #2</li>
             <li>Provided Equipment #3</li>
+            <li>Provided Equipment #4</li>
           </ul>
         </div>
-        <button class="bookButton" onClick={handleCheckout}>Book Now</button>
+        <div className="booking-buttons">
+          <button class="bookButton" onClick={handleCheckout}>Book Now</button>
+          <button class="bookButton" onClick={handleMyPlans}>Start New Plan</button>
+        </div>
         <div className="activity-instrInfo">
           <h3>Available Instructors</h3>
           (Instructor will be chosen when booking is finalized at checkout)
-          <div className="instrButtons">
+          <div className="activity-instrButton">
             <button onClick={handleInstructor}>
               <div className="instructorWrapper">
                 <div className="instructorRating">

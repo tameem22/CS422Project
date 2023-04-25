@@ -24,18 +24,6 @@
  }
  
  
- .members {
-   display: flex;
-   flex-direction: row;
-   flex-wrap: wrap;
- }
-
- .members {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
  
  ul {
     columns: 2;
@@ -60,3 +48,50 @@
  }
  
 
+.checkout-instructor-container{
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+}
+
+.checkout-instructor-container>button {
+    padding: 10px;
+    border-radius: 10%;
+}
+
+.checkout-instructor-container>button:focus {
+    padding: 10px;
+    border-radius: 10%;
+    background-color: rgb(201, 201, 201);
+}
+
+.selected-instructor-button {
+    padding: 10px;
+    border-radius: 10%;
+    background-color: rgb(201, 201, 201);
+}
+
+.checkout-instructorImg {
+
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+
+}
+
+.instr-page-link {
+    cursor: pointer;
+}
+
+.myplans-gmember-container{
+    justify-content: left;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.myplans-gmember-container>button {
+    padding: 10px;
+    border-radius: 10%;
+}
