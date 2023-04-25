@@ -1,40 +1,99 @@
-
-
-import Navbar from "../../components/Navbar/Navbar"
+import Navbar from "../../components/Navbar/Navbar";
 import { useNavigate } from "react-router-dom";
-import { useLocation } from "react-router-dom";
-import { useState } from "react";
+import { useState, useRef } from "react";
 import { format } from "date-fns";
 import { DateRange } from "react-date-range";
 import "./MyPlans.css";
 import DropdownMenu from "../../components/DropdownMenu/DropdownMenu";
-
+import {
+  Dialog,
+  DialogTitle,
+  DialogContent,
+  DialogActions,
+  TextField,
+  Button,
+} from "@mui/material";
 
 const MyPlans = () => {
- const navigate = useNavigate();
- const [openDate, setOpenDate] = useState(false);
- const [date, setDate] = useState([
-   {
-     startDate: new Date(),
-     endDate: new Date(),
-     key: 'selection',
-   }
- ]);
+  const navigate = useNavigate();
+  const newMemberNameRef = useRef(null);
+  const newMemberEmailRef = useRef(null);
+  const [openDate, setOpenDate] = useState(false);
+  const [openInvitePopup, setOpenInvitePopup] = useState(false);
+  const [groupMembers, setGroupMembers] = useState([
+    { name: "John Doe", status: "Accepted" },
+    { name: "Jane Doe", status: "Accepted" },
+    { name: "Jack Doe", status: "Declined" },
+  ]);
+  const [date, setDate] = useState([
+    {
+      startDate: new Date(),
+      endDate: new Date(),
+      key: "selection",
+    },
+  ]);
 
- const handleCheckout = () => {
-  navigate("/Checkout", {});
-};
+  
+  const handleCheckout = () => {
+    navigate("/Checkout", {});
+  };
 
- const handleInstructor = () => {
-   navigate("/InstructorInfo", {});
- };
+  const handleInstructor = () => {
+    navigate("/InstructorInfo", {});
+  };
+
+  const inviteNewMember = (name) => {
+    setOpenInvitePopup(false);
+    setGroupMembers([...groupMembers, { name, status: "Pending" }]);
+  };
+
+  const handleInviteMemberClick = () => {
+    setOpenInvitePopup(true);
+  };
+
+  const handleCloseInvitePopup = () => {
+    setOpenInvitePopup(false);
+  };
 
  
 
- return (
-   <div>
-     <Navbar />
-     <div className="checkoutContainer">
+  return (
+    <div>
+      <Navbar />
+      <Dialog open={openInvitePopup} onClose={handleCloseInvitePopup}>
+        <DialogTitle>Invite New Member</DialogTitle>
+        <DialogContent>
+          <TextField
+            autoFocus
+            margin="dense"
+            id="name"
+            label="Name"
+            type="text"
+            fullWidth
+            inputRef={newMemberNameRef}
+          />
+          <TextField
+            margin="dense"
+            id="email"
+            label="Email Address"
+            type="email"
+            fullWidth
+            inputRef={newMemberEmailRef} // add a reference for the email input
+          />
+        </DialogContent>
+        <DialogActions>
+          <Button onClick={handleCloseInvitePopup} color="primary">
+            Cancel
+          </Button>
+          <Button
+            onClick={() => inviteNewMember(newMemberNameRef.current.value)}
+            color="primary"
+          >
+            Invite
+          </Button>
+        </DialogActions>
+      </Dialog>
+      <div className="checkoutContainer">
        <div className="checkoutWrapper">
         
          <div className="trip-info">
@@ -48,11 +107,19 @@ const MyPlans = () => {
            <div className="members">
              <h1>Group Members</h1>
              <div className="myplans-gmember-container">
-               <button>John Doe<br /> <br />Invite Status: Accepted</button>
-               <button>John Doe<br /> <br />Invite Status: Accepted</button>
-               <button>John Doe<br /> <br />Invite Status: Declined</button>
-               <button>+<br /> <br />Invite More Members</button>
-             </div>
+            {groupMembers.map((member, index) => (
+              <button key={index}>
+                {member.name}
+                <br /> <br />
+                Invite Status: {member.status}
+              </button>
+            ))}
+            <button onClick={handleInviteMemberClick}>
+              +
+              <br /> <br />
+              Invite More Members
+            </button>
+          </div>
            </div>
            <div className="availableIns">
              <h1>Available Instructors</h1>

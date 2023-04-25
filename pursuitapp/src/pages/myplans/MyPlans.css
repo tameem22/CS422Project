@@ -103,3 +103,10 @@
 .costHeader{
    color: white;
 }
+
+.myplans-gmember-container {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap; /* add this */
+   gap: 20px;
+ }
