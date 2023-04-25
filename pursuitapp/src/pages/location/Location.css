@@ -1,0 +1,37 @@
+.headerContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+  
+.headerImg {
+    width: 100%;
+    max-width: 1024px;
+}
+
+.wordContainer {
+    width: 100%;
+    max-width: 1024px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.destPlace {
+    font-size: 30px;
+    color: #0071c2;
+    cursor: pointer;
+    font-weight: bold;
+}
+  
+.destLocate {
+    font-size: 18px;
+    font-weight: bold;
+}
+  
+.destDescription{
+    font-size: 20px;
+}
+
+.mockDescription{
+    font-size: 18px
+}
