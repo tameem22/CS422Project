@@ -1,12 +1,20 @@
 import Navbar from "../../components/Navbar/Navbar"
 import { useNavigate } from "react-router-dom";
 import './Activity.css'
+import mapImg from "./map.jpg";
+import housesImg from "./houses.png";
+import scubaImg1 from "./scuba1.jpg";
+import scubaImg2 from "./scuba2.png";
 
 const Activity = () => {
   const navigate = useNavigate();
 
   const handleCheckout = () => {
     navigate("/Checkout", {});
+  };
+
+  const handleInstr = () => {
+    navigate("/InstructorInfo", {});
   };
 
 
@@ -16,6 +24,11 @@ const Activity = () => {
       <Navbar />
       </div>
       <div className = "container">
+        <div className="images">
+          <img src={housesImg} className="housesImg"/>
+          <img src={scubaImg1} className="scubaImg1"/>
+          <img src={scubaImg2} className="scubaImg2"/>
+        </div>
         <div className="activityInfo">
           <h1>Scuba Diving</h1>
           <h2>Riviera Beach, FL</h2>
@@ -34,8 +47,8 @@ const Activity = () => {
           <h3>Available Instructors</h3>
           (Instructor will be chosen when booking is finalized at checkout)
           <div className="instrButtons">
-            <button>John Instructor</button>
-            <button>John Instructor</button>
+            <button onClick={handleInstr}>John Instructor<br/> <br/><u>View Instructor Page</u></button>
+            <button onClick={handleInstr}>John Instructor<br/> <br/><u>View Instructor Page</u></button>
           </div>
         </div>
         <div className="areas">
@@ -50,6 +63,7 @@ const Activity = () => {
               <li>Point of Interest #4</li>
             </ul>
           </div>
+          <img src={mapImg} className="mapImg"/>
         </div>
       </div>
     </div>
