@@ -32,6 +32,24 @@ const Activity = () => {
         <button class="bookButton" onClick={handleCheckout}>Book Now</button>
         <div className="instrInfo">
           <h3>Available Instructors</h3>
+          (Instructor will be chosen when booking is finalized at checkout)
+          <div className="instrButtons">
+            <button>John Instructor</button>
+            <button>John Instructor</button>
+          </div>
+        </div>
+        <div className="areas">
+          <h3>Get to Know The Area:</h3>
+          <div className="PoI">
+            <ul>
+              <li>Point of Interest #1</li>
+              <li>Point of Interest #2</li>
+            </ul>
+            <ul>
+              <li>Point of Interest #3</li>
+              <li>Point of Interest #4</li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
