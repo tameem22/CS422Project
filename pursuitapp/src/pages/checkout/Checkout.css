@@ -1,0 +1,62 @@
+.checkoutContainer {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+ }
+ 
+ 
+ .checkoutWrapper {
+    width: 100%;
+    max-width: 1024px;
+    display: flex;
+    gap: 20px;
+ }
+ 
+ 
+ .trip-info {
+    flex: 7;
+ }
+ 
+ 
+ .tripTitle {
+    display: flex;
+    flex-direction: column;
+ }
+ 
+ 
+ .members {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+ }
+
+ .members {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+ 
+ ul {
+    columns: 2;
+    -webkit-columns: 2;
+    -moz-columns: 2;
+ }
+ 
+ 
+ .costBox {
+    flex: 2;
+    background-color: #b4b4b4;
+    padding: 10px;
+    border-radius: 10px;
+    position: sticky;
+    top: 10px;
+    height: max-content;
+ }
+
+ .costInfo{
+    display: flex;
+    flex-direction: column;
+ }
+ 
+
