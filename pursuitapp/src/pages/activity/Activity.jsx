@@ -13,7 +13,7 @@ const Activity = () => {
     navigate("/Checkout", {});
   };
 
-  const handleInstr = () => {
+  const handleInstructor = () => {
     navigate("/InstructorInfo", {});
   };
 
@@ -47,8 +47,32 @@ const Activity = () => {
           <h3>Available Instructors</h3>
           (Instructor will be chosen when booking is finalized at checkout)
           <div className="instrButtons">
-            <button onClick={handleInstr}>John Instructor<br/> <br/><u>View Instructor Page</u></button>
-            <button onClick={handleInstr}>John Instructor<br/> <br/><u>View Instructor Page</u></button>
+            <button onClick={handleInstructor}>
+              <div className="instructorWrapper">
+                <div className="instructorRating">
+                  <span>John I.</span>
+                  <button>4.7 ✰</button>
+                </div>
+                <img
+                  src="https://i.imgur.com/UeFpMQf.png"
+                  alt=""
+                  className="instructorImg"
+                  onClick={handleInstructor}
+                />
+              </div><u>View Instructor Page</u></button>
+              <button onClick={handleInstructor}>
+              <div className="instructorWrapper">
+                <div className="instructorRating">
+                  <span>John I.</span>
+                  <button>4.7 ✰</button>
+                </div>
+                <img
+                  src="https://i.imgur.com/UeFpMQf.png"
+                  alt=""
+                  className="instructorImg"
+                  onClick={handleInstructor}
+                />
+              </div><u>View Instructor Page</u></button>
           </div>
         </div>
         <div className="areas">
