@@ -10,7 +10,8 @@
   
   .itemImg {
     width: 25%;
-    height: 25%;
+    height: 180x;
+    max-height: 180px;
     object-fit: cover;
     border-radius: 30px;
     cursor: pointer;
@@ -26,7 +27,7 @@
   }
   
   .itemTitle {
-    font-size: 24px;
+    font-size: 20px;
     color: #0071c2;
     cursor: pointer;
     font-weight: bold;

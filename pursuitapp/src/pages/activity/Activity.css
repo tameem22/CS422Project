@@ -19,9 +19,14 @@
     flex-direction: column;
     justify-content: center;
     position:relative;
-    top:40px;
     text-align: center;
   }
+
+  .activity-instrInfo>span{
+    margin-top: -20px;
+    margin-bottom: 10px;
+  }
+
   .instrButtons>button{
     /* height: 100%; */
 

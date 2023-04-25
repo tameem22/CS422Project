@@ -1,8 +1,7 @@
 import "./ExploreItem.css";
 import { useNavigate } from "react-router-dom";
 
-const ExploreItem = () => {
-
+const ExploreItem = ({ title, imgSrc, location, description, instructorName, instructorRating, instructorImgSrc, price, rating}) => {
   const navigate = useNavigate();
 
   const handleActivity = () => {
@@ -16,7 +15,7 @@ const ExploreItem = () => {
   return (
     <div className="exploreItem">
       <img
-        src="https://i.imgur.com/iOg7n5W.png"
+        src={imgSrc}
         alt=""
         className="itemImg"
         onClick={handleActivity}
@@ -24,33 +23,33 @@ const ExploreItem = () => {
       <div className="itemDesc">
         <div className="itemDetails">
           <span className="itemTitle" onClick={handleActivity}>
-            Deep Sea Diving</span>
-          <span className="itemLocation">Sydney, Australia</span>
+            {title}</span>
+          <span className="itemLocation">{location}</span>
         </div>
         <span className="itemSubtitle">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu neque non sem faucibus malesuada. Pellentesque in facilisis enim. Ut viverra vulputate urna.
+          {description}
         </span>
         <img
-        src="https://i.imgur.com/0aO7Hoq.png"
-        alt=""
-        className="itemRating"
-      />
+          src={rating}
+          alt=""
+          className="itemRating"
+        />
       </div>
       <div className="instructorDetails">
         <div className="instructorWrapper">
           <div className="instructorRating">
-            <span>John I.</span>
-            <button>4.7 ✰</button>
+            <span>{instructorName}</span>
+            <button>{instructorRating} ✰</button>
           </div>
           <img
-            src="https://i.imgur.com/UeFpMQf.png"
+            src={instructorImgSrc}
             alt=""
             className="instructorImg"
             onClick={handleInstructor}
           />
         </div>
         <div className="itemDetailTexts">
-          <span className="itemPrice">$189</span>
+          <span className="itemPrice">${price}</span>
           <span className="itemTaxText">Includes taxes and fees</span>
           <button className="itemCheckButton" onClick={handleActivity}>Check availability</button>
         </div>

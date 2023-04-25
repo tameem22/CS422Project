@@ -37,6 +37,8 @@ const PaymentDetails = ({ onChange }) => (
 );
 
 
+
+
 const Checkout = () => {
  const navigate = useNavigate();
  const [openDate, setOpenDate] = useState(false);
@@ -47,6 +49,12 @@ const Checkout = () => {
      key: 'selection',
    }
  ]);
+
+ const [selectedInstructor, setSelectedInstructor] = useState(null);
+
+ const handleInstructorSelection = (index) => {
+   setSelectedInstructor(index);
+ };
 
  const handleConfirmation = () => {
   navigate("/Confirmation", {});
@@ -68,58 +76,58 @@ const handleSubmit = (event) => {
   console.log(formData);
 };
 
- return (
-   <div>
-     <Navbar />
-     <div className="checkoutContainer">
-       <div className="checkoutWrapper">
-         <div className="trip-info">
-           <div className="tripTitle">
-             <h1>User's Trip Title</h1>
-             <b>Trip Location: Denver, Colorado</b>
-             <b>Trip Activity: Skiing</b>
-             <b>Total Group Size: 3</b>
-             <b>Trip Status: Planned</b>
-           </div>
+  return (
+    <div>
+      <Navbar />
+      <div className="checkoutContainer">
+        <div className="checkoutWrapper">
+          <div className="trip-info">
+            <div className="tripTitle">
+              <h1>User's Trip Title</h1>
+              <b>Trip Location: Denver, Colorado</b>
+              <b>Trip Activity: Skiing</b>
+              <b>Total Group Size: 3</b>
+              <b>Trip Status: Planned</b>
+            </div>
 
-           <div className="availableIns">
-             <h2>Confirm Your Instructor</h2>
-             <div className="checkout-instructor-container">
-               <button >
-                 <div className="instructorWrapper">
-                   <div className="instructorRating">
-                     <span>John I.</span>
-                     <button>4.7 ✰</button>
-                   </div>
-                   <img
-                     src="https://i.imgur.com/UeFpMQf.png"
-                     alt=""
-                     className="checkout-instructorImg"
-                   />
-                 </div><u className='instr-page-link' onClick={handleInstructor}>View Instructor Page</u>
-               </button>
-               <button >
-                 <div className="instructorWrapper">
-                   <div className="instructorRating">
-                     <span>John I.</span>
-                     <button>4.7 ✰</button>
-                   </div>
-                   <img
-                     src="https://i.imgur.com/UeFpMQf.png"
-                     alt=""
-                     className="checkout-instructorImg"
-                   />
-                 </div ><u className='instr-page-link' onClick={handleInstructor}>View Instructor Page</u>
-               </button>
-             </div>
-           </div>
-           <div>
-             <h2>Checkout</h2>
-             <form onSubmit={handleSubmit}>
-               <PersonalDetails onChange={handleChange} />
-               <PaymentDetails onChange={handleChange} />
-               <BillingDetails onChange={handleChange} />
-             </form>
+            <div className="availableIns">
+              <h2>Confirm Your Instructor</h2>
+              <div className="checkout-instructor-container">
+                <button >
+                  <div className="instructorWrapper">
+                    <div className="instructorRating">
+                      <span>John I.</span>
+                      <button>4.7 ✰</button>
+                    </div>
+                    <img
+                      src="https://i.imgur.com/UeFpMQf.png"
+                      alt=""
+                      className="checkout-instructorImg"
+                    />
+                  </div><u className='instr-page-link' onClick={handleInstructor}>View Instructor Page</u>
+                </button>
+                <button >
+                  <div className="instructorWrapper">
+                    <div className="instructorRating">
+                      <span>John I.</span>
+                      <button>4.7 ✰</button>
+                    </div>
+                    <img
+                      src="https://i.imgur.com/UeFpMQf.png"
+                      alt=""
+                      className="checkout-instructorImg"
+                    />
+                  </div ><u className='instr-page-link' onClick={handleInstructor}>View Instructor Page</u>
+                </button>
+              </div>
+            </div>
+            <div>
+              <h2>Checkout</h2>
+              <form onSubmit={handleSubmit}>
+                <PersonalDetails onChange={handleChange} />
+                <PaymentDetails onChange={handleChange} />
+                <BillingDetails onChange={handleChange} />
+              </form>
            </div>
          </div>
          <div className="costBox">

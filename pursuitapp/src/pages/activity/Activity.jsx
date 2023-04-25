@@ -35,7 +35,7 @@ const Activity = () => {
         </div>
         <div className="activity-activityInfo">
           <h1>Scuba Diving</h1>
-          <h2>Riviera Beach, FL</h2>
+          <h3>Riviera Beach, FL</h3>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu neque non sem faucibus malesuada. Pellentesque in facilisis enim. Ut viverra vulputate urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc justo nibh, pretium eget feugiat vitae, ultricies vitae urna. Donec viverra leo at laoreet commodo. Vivamus tempor ligula at fringilla auctor. Maecenas sit amet placerat orci, sed accumsan lorem.
         </div>
         <div className ="equipmentInfo">
@@ -52,8 +52,8 @@ const Activity = () => {
           <button class="bookButton" onClick={handleCheckout}>Book Now</button>
         </div>
         <div className="activity-instrInfo">
-          <h3>Available Instructors</h3>
-          (Instructor will be chosen when booking is finalized at checkout)
+          <h2>Available Instructors</h2>
+          <span>(Instructor will be chosen when booking is finalized at checkout)</span>
           <div className="activity-instrButton">
             <button onClick={handleInstructor}>
               <div className="instructorWrapper">

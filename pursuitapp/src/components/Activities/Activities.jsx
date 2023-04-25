@@ -20,13 +20,13 @@ const Destinations = () => {
 
   const navigate = useNavigate();
 
-  const handleItemClick = () => {
-    navigate("/Explore", { state: { destination, date, options } });
+  const handleItemClick = (activity) => {
+    navigate("/Explore", { state: { destination, date, options, activity } });
   };
 
   return (
     <div className="activities">
-      <div className="activities-item" onClick={handleItemClick} >
+      <div className="activities-item" onClick={() => handleItemClick("scubaDiving")}>
         <img
           src="https://i.imgur.com/L65Me0D.jpeg"
           alt=""
@@ -38,7 +38,7 @@ const Destinations = () => {
         </div>
       </div>
       
-      <div className="activities-item" onClick={handleItemClick} >
+      <div className="activities-item" onClick={() => handleItemClick("hiking")}>
         <img
           src="https://i.imgur.com/Ou2j6Oq.jpeg"
           alt=""
@@ -49,7 +49,7 @@ const Destinations = () => {
           <h2>42 locations</h2>
         </div>
       </div>
-      <div className="activities-item" onClick={handleItemClick} >
+      <div className="activities-item" onClick={() => handleItemClick("hunting")}>
         <img
           src="https://i.imgur.com/RleGasv.jpeg"
           alt=""
@@ -60,7 +60,7 @@ const Destinations = () => {
           <h2>17 locations</h2>
         </div>
       </div>
-      <div className="activities-item" onClick={handleItemClick}>
+      <div className="activities-item" onClick={() => handleItemClick("fishing")}>
         <img
           src="https://i.imgur.com/lkAn6xv.png"
           alt=""
