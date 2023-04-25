@@ -1,10 +1,10 @@
 import Navbar from "../../components/Navbar/Navbar"
 import { useNavigate } from "react-router-dom";
 import './Activity.css'
-import mapImg from "./map.jpg";
-import housesImg from "./houses.png";
-import scubaImg1 from "./scuba1.jpg";
-import scubaImg2 from "./scuba2.png";
+import mapImg from "../../assets/map.jpg";
+import housesImg from "../../assets/houses.png";
+import scubaImg1 from "../../assets/scuba1.jpg";
+import scubaImg2 from "../../assets/scuba2.png";
 
 const Activity = () => {
   const navigate = useNavigate();
@@ -24,12 +24,12 @@ const Activity = () => {
       <Navbar />
       </div>
       <div className = "container">
-        <div className="images">
+        <div className="activity-images">
           <img src={housesImg} className="housesImg"/>
           <img src={scubaImg1} className="scubaImg1"/>
           <img src={scubaImg2} className="scubaImg2"/>
         </div>
-        <div className="activityInfo">
+        <div className="activity-activityInfo">
           <h1>Scuba Diving</h1>
           <h2>Riviera Beach, FL</h2>
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum eu neque non sem faucibus malesuada. Pellentesque in facilisis enim. Ut viverra vulputate urna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc justo nibh, pretium eget feugiat vitae, ultricies vitae urna. Donec viverra leo at laoreet commodo. Vivamus tempor ligula at fringilla auctor. Maecenas sit amet placerat orci, sed accumsan lorem.
@@ -43,7 +43,7 @@ const Activity = () => {
           </ul>
         </div>
         <button class="bookButton" onClick={handleCheckout}>Book Now</button>
-        <div className="instrInfo">
+        <div className="activity-instrInfo">
           <h3>Available Instructors</h3>
           (Instructor will be chosen when booking is finalized at checkout)
           <div className="instrButtons">

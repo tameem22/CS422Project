@@ -1,0 +1,121 @@
+ .activity-activityInfo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: start;
+    justify-content: center;
+    width:100%;
+    max-width: 1024px;
+  }
+
+  .container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+  }
+  .activity-instrInfo{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position:relative;
+    top:40px;
+    text-align: center;
+  }
+  .instrButtons>button{
+    /* height: 100%; */
+
+    height: 120px;
+    position:relative;
+    bottom:100px;
+    appearance: button;
+      /* background-color: #003580; */
+      border-radius: 15px;
+      border-width: 0;
+      box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+      cursor: pointer;
+      font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+      font-size: 100%;
+      
+      /* line-height: 1.15; */
+      /* margin: 12px 0 0; */
+      outline: none;
+      /* overflow: hidden; */
+      padding: 0 25px;
+      /* text-align: center; */
+      text-transform: none;
+      transform: translateZ(0);
+      transition: all .2s,box-shadow .08s ease-in;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      /* width: 100%; */
+  }
+  .instrButtons{
+    position: 'relative';
+    /* left:100px; */
+  }
+  
+  .bookButton{
+    height: 50px;
+    width: auto;
+    appearance: button;
+      background-color: #003580;
+      border-radius: 6px;
+      border-width: 0;
+      box-shadow: rgba(50, 50, 93, .1) 0 0 0 1px inset,rgba(50, 50, 93, .1) 0 2px 5px 0,rgba(0, 0, 0, .07) 0 1px 1px 0;
+      box-sizing: border-box;
+      color: #fff;
+      cursor: pointer;
+      font-family: -apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Ubuntu,sans-serif;
+      font-size: 100%;
+      /* height: 44px; */
+      line-height: 1.15;
+      margin: 12px 0 0;
+      outline: none;
+      overflow: hidden;
+      padding: 0 25px;
+      position: relative;
+      text-align: center;
+      text-transform: none;
+      transform: translateZ(0);
+      transition: all .2s,box-shadow .08s ease-in;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      /* width: 100%; */
+  }
+
+  .PoI{
+    display: flex;
+    flex-direction: row;
+  }
+  .activity-images{
+    display:flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: center;
+  }
+  /* .imagescontainer{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+  } */
+
+  .housesImg{
+    width: 25%;
+    height:auto;
+  }
+  .scubaImg1{
+    width: 25%;
+    height:auto;
+  }
+  .scubaImg2{
+    width: 25%;
+    height:auto;
+  }
+  /* .equipmentInfo{
+    position:relative;
+    right:100px;
+    } */
+
