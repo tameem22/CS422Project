@@ -1,70 +1,18 @@
-# Getting Started with Create React App
+Pursuit App - Adventure Marketplace
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+How to start:
+    1. Enter information for a destination within the search bar and search for that destination. If no activities show up in the next page (likely as there aren't that many activities in this iteration) erase the destination on the filter menu on the left. The user can then select any filters to find an activity they want.
+    2. Select a location or activity type on the bottom of the screen. 
 
-## Available Scripts
 
-In the project directory, you can run:
+Deviations from pixel perfect prototype:
+    "Planning" page was split into a MyPlans and Checkout page as this provides a better experience for users to plan their trips. One of the selling points for pursuit is to be organized and confident in your trip before booking, the MyPlans page provides this. It also provides a utility to invite friends to a trip and keep track of members who are going to help push users out of their comfort zone and experience new things with their friends. 
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Contributions by each group member:
+    Bret: Routing setup (App.js), Navbar, Home page (including components HomeHeader.jsx, Destinations.jsx, Activities.jsx), Explore page (including components ExploreItem.jsx and filtering functionality), Instructor information page (including component InstructorHeader.jsx), Confirmation page, Checkout page, MyPlans page (including group member invitation utility)
+    
+    Jonathon: Initial planning page (later split into Checkout and MyPlans page)
+    
+    Tameem: Initial github setup, Activity page
+    
+    Sebastian: Location page
